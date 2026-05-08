@@ -1,35 +1,84 @@
-
-   <h1>Hello World!</h1>
-    <p>This is my first website 😊</p>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>My First Website</title>
-    <style>
-        body {background-color:lightblue;text-align:center;font-family:Arial;}
-        h1 {color: darkblue;}</style>
-<head>
-    <title>My First Websitel</title>
-    <link rel="stylesheet" href="style.css">
-
-
-    <h1>About The Website</h1>
-    <p>My Website was established in 2026.</p>
-
-</body>
-</html>
-<title>Contact Us</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoShowZero | AI No-Show Prevention Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#070b17;--bg2:#0d1325;--panel:rgba(255,255,255,.06);--line:rgba(255,255,255,.12);
+      --text:#f5f8ff;--muted:#a7b2c9;--blue:#41a3ff;--purple:#7d66ff;--green:#30e6ac;
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,sans-serif;background:radial-gradient(circle at 10% 20%,#1d1d55 0,#070b17 35%),var(--bg);color:var(--text)}
+    .orb{position:fixed;filter:blur(80px);opacity:.35;z-index:-1}.orb1{width:340px;height:340px;background:#3e9dff;top:-100px;left:-110px}.orb2{width:360px;height:360px;background:#7d66ff;right:-140px;top:30%}
+    .wrap{max-width:1160px;margin:auto;padding:0 20px}
+    nav{position:sticky;top:0;backdrop-filter:blur(16px);background:rgba(7,11,23,.72);border-bottom:1px solid var(--line);z-index:99}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}.logo{font-weight:800}.logo span{color:var(--blue)}
+    .btn{border:1px solid var(--line);background:var(--panel);color:var(--text);padding:12px 18px;border-radius:12px;font-weight:600;text-decoration:none;display:inline-block;transition:.2s}
+    .btn:hover{transform:translateY(-2px);border-color:#5fb6ff}.btn.primary{background:linear-gradient(90deg,var(--blue),var(--purple));border:none}
+    section{padding:86px 0}h1,h2,h3{line-height:1.15;margin:0 0 12px}h1{font-size:clamp(2.1rem,5vw,4rem)}h2{font-size:clamp(1.65rem,3.3vw,2.6rem)}p{color:var(--muted);line-height:1.65}
+    .hero{display:grid;gap:28px;grid-template-columns:1fr}.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}
+    .trust{display:flex;gap:16px;flex-wrap:wrap}.trust b{color:#bde5ff}
+    .panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:18px;backdrop-filter:blur(12px)}
+    .dash{position:relative}.mock{display:grid;gap:14px;grid-template-columns:1.2fr .8fr}.box{background:#0e1530;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:12px}
+    .chart{height:140px;background:linear-gradient(180deg,#3da5ff22,#30e6ac12);border-radius:12px;position:relative;overflow:hidden}
+    .line{position:absolute;inset:auto 8px 20px;background:linear-gradient(90deg,#41a3ff,#7d66ff);height:3px;border-radius:5px;animation:pulse 2.7s infinite}
+    @keyframes pulse{0%,100%{transform:scaleX(.86)}50%{transform:scaleX(1)}}
+    .float{position:absolute;padding:10px 12px;background:#121b3a;border:1px solid #4baefe88;border-radius:12px;font-size:.84rem;animation:float 4s ease-in-out infinite}
+    .f1{top:-10px;right:14px}.f2{bottom:24px;left:-12px;animation-delay:1s}.f3{bottom:-14px;right:30px;animation-delay:2s}
+    @keyframes float{50%{transform:translateY(-8px)}}
+    .grid3,.grid4{display:grid;gap:16px}.grid3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.grid4{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+    .step{counter-increment:steps}.step h3:before{content:"0" counter(steps) " ";color:#86c8ff}
+    .features .panel:hover,.industry .panel:hover{border-color:#57b6ff88;transform:translateY(-4px)}
+    .features .panel,.industry .panel{transition:.25s}
+    .table .row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+    .price{font-size:2rem;font-weight:800}.tag{font-size:.75rem;color:#0b1226;background:#88d3ff;padding:5px 8px;border-radius:999px;font-weight:700}
+    .carousel{display:grid;grid-template-columns:1fr;gap:12px}.testimonial{display:none}.testimonial.active{display:block}
+    footer{padding:46px 0;border-top:1px solid var(--line)}footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
+    @media(min-width:920px){.hero{grid-template-columns:1fr 1fr}}
+  </style>
 </head>
 <body>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-    <h1>Contact me</h1>
-    <p>Email: azurucab@gmail.com</p>
-
+<div class="orb orb1"></div><div class="orb orb2"></div>
+<nav><div class="wrap nav"><div class="logo">NoShow<span>Zero</span></div><a href="#pricing" class="btn">Pricing</a></div></nav>
+<section><div class="wrap hero">
+  <div>
+    <h1>Stop Losing Money From No-Shows</h1>
+    <p>AI predicts missed appointments before they happen and automatically takes action to keep your schedule full.</p>
+    <div class="cta"><a class="btn primary" href="#pricing">Start Free Trial</a><a class="btn" href="#demo">Watch Demo</a></div>
+    <div class="trust"><span class="panel"><b>4,200+</b> businesses protected</span><span class="panel"><b>$18.2M</b> recovered revenue</span></div>
+  </div>
+  <div class="panel dash">
+    <div class="mock">
+      <div class="box"><h3>Revenue Recovery</h3><div class="chart"><div class="line"></div></div></div>
+      <div class="box"><h3>AI Risk Scores</h3><p>High: 87%<br>Medium: 42%<br>Low: 8%</p></div>
+      <div class="box"><h3>Calendar Alerts</h3><p>⚠ Tue 3:30 PM high-risk<br>✅ Thu confirmed</p></div>
+      <div class="box"><h3>Reminder Preview</h3><p>SMS, Email, WhatsApp sent automatically.</p></div>
+    </div>
+    <div class="float f1">87% No-Show Risk Detected</div><div class="float f2">Reminder Sent Automatically</div><div class="float f3">$2,450 Revenue Recovered This Month</div>
+  </div>
+</div></section>
+<section><div class="wrap"><h2>The Silent Revenue Leak</h2><p>Every empty slot compounds into lost revenue, stressed staff, and frustrated customers waiting for last-minute callbacks.</p><div class="grid3"><div class="panel">📉 Businesses lose up to <b>30% revenue</b> from missed appointments</div><div class="panel">⏱ Manual follow-ups waste <b>hours weekly</b></div><div class="panel">🧠 Most no-shows are <b>predictable</b> with behavior data</div></div></div></section>
+<section><div class="wrap"><h2>How It Works</h2><div class="grid3" style="counter-reset:steps"><div class="panel step"><h3>AI Detects Risk</h3><p>Models analyze booking history, response behavior, and lead quality patterns.</p></div><div class="panel step"><h3>Automation Activates</h3><p>Smart reminders, confirmations, and one-click rescheduling flows launch instantly.</p></div><div class="panel step"><h3>Revenue Protected</h3><p>Less downtime, tighter schedules, and more completed appointments every week.</p></div></div></div></section>
+<section class="features"><div class="wrap"><h2>Everything You Need to Prevent No-Shows</h2><div class="grid4">
+<div class="panel">🤖 Predictive AI</div><div class="panel">🔔 Smart Reminders</div><div class="panel">💬 WhatsApp Integration</div><div class="panel">📨 Messenger Automation</div><div class="panel">🗓 Calendar Sync</div><div class="panel">👥 Team Alerts</div><div class="panel">💳 Smart Deposits</div><div class="panel">📊 Analytics Dashboard</div><div class="panel">♻️ Auto Rebooking</div><div class="panel">🔍 Customer Insights</div>
+</div></div></section>
+<section id="demo"><div class="wrap"><h2>Live Dashboard Preview</h2><div class="panel mock"><div class="box"><h3>Appointment Risk Board</h3><p>AI Risk Score, calendar warnings, and risky booking deposits in one view.</p></div><div class="box"><h3>Activity Feed</h3><p>10:04 SMS sent • 10:06 WhatsApp opened • 10:09 Rescheduled in 1 click.</p></div><div class="box"><h3>Revenue Saved Tracker</h3><p class="price">$12,440</p></div><div class="box"><h3>Engagement Analytics</h3><p>Open rate 92% • Confirmation rate 78% • No-shows down 61%</p></div></div></div></section>
+<section class="industry"><div class="wrap"><h2>Built for Appointment-Based Businesses</h2><div class="grid4"><div class="panel">Dental Clinics</div><div class="panel">Beauty Salons</div><div class="panel">Medical Clinics</div><div class="panel">Coaches</div><div class="panel">Tattoo Studios</div><div class="panel">Fitness Trainers</div><div class="panel">Consultants</div><div class="panel">Barbershops</div></div></div></section>
+<section><div class="wrap"><h2>What Customers Say</h2><div class="carousel panel"><article class="testimonial active"><p>“NoShowZero cut our salon no-shows by 58% in 45 days. Our chairs stay full.”</p><b>— Maya R., Salon Owner</b></article><article class="testimonial"><p>“The risk score plus automated deposit requests changed our clinic operations overnight.”</p><b>— David K., Clinic Manager</b></article><article class="testimonial"><p>“As a consultant, I stopped chasing clients manually. Revenue is up and stress is down.”</p><b>— Elena T., Business Consultant</b></article></div></div></section>
+<section id="pricing"><div class="wrap"><h2>Simple Pricing, Powerful ROI</h2><div class="table grid3">
+<div class="panel"><h3>Starter</h3><p class="price">$79<span style="font-size:1rem;color:var(--muted)">/mo</span></p><p>Core reminders, calendar sync, basic analytics.</p><a class="btn" href="#">Start Free Trial</a></div>
+<div class="panel" style="border-color:#66bbff"><span class="tag">Most Popular</span><h3>Growth</h3><p class="price">$179<span style="font-size:1rem;color:var(--muted)">/mo</span></p><p>Predictive AI, multi-channel automation, deposits, team alerts.</p><a class="btn primary" href="#">Start Free Trial</a></div>
+<div class="panel"><h3>Enterprise</h3><p class="price">Custom</p><p>Advanced integrations, multi-location, dedicated success manager.</p><a class="btn" href="#">Contact Sales</a></div>
+</div></div></section>
+<section><div class="wrap panel" style="text-align:center"><h2>Every Empty Appointment Slot Is Lost Revenue</h2><p>Let AI protect your schedule 24/7.</p><a class="btn primary" href="#pricing">Start Free Trial</a></div></section>
+<footer><div class="wrap cols"><div><div class="logo">NoShow<span>Zero</span></div><p>AI no-show prevention for modern service businesses.</p></div><div><b>Product</b><p>Features<br>Pricing<br>Dashboard</p></div><div><b>Integrations</b><p>Google Calendar<br>Outlook<br>WhatsApp</p></div><div><b>Company</b><p>Contact<br>Privacy Policy<br>Terms</p></div></div></footer>
+<script>
+  const items=[...document.querySelectorAll('.testimonial')];let i=0;
+  setInterval(()=>{items[i].classList.remove('active');i=(i+1)%items.length;items[i].classList.add('active');},3500);
+</script>
 </body>
 </html>
